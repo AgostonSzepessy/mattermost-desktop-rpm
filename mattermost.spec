@@ -4,9 +4,9 @@ Release:    1%{dist}
 Summary:    Mattermost Desktop application for Linux.
 URL:        https://about.mattermost.com/
 License:    ASL 2.0
-
+BuildArch:	x86_64
 Source0:    https://github.com/mattermost/desktop/archive/v%{version}.tar.gz
-BuildRequires: npm, nodejs, python, gcc-c++
+BuildRequires: npm, nodejs, python, gcc-c++, git
 Requires: gtk2, libXtst, libXScrnSaver, gconf-editor, nss, nspr, alsa-lib
 
 %global debug_package %{nil}
