@@ -1,0 +1,1120 @@
+
+
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.XwT5m8
++ umask 022
++ cd /home/agoston/Documents/stuff/mattermost
++ cd /home/agoston/Documents/stuff/mattermost
++ rm -rf desktop-3.7.0
++ /usr/bin/tar -xof -
++ /usr/bin/gzip -dc /home/agoston/Documents/stuff/mattermost/v3.7.0.tar.gz
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd desktop-3.7.0
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ sed -i -e '/^[[:space:]]*"target": \[/!b' -e '$!N;s/\n[[:space:]]*"deb",//' electron-builder.json
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.NohFO2
++ umask 022
++ cd /home/agoston/Documents/stuff/mattermost
++ cd desktop-3.7.0
++ npm install
+
+> electron-chromedriver@1.6.0 install /home/agoston/Documents/stuff/mattermost/desktop-3.7.0/node_modules/electron-chromedriver
+> node ./download-chromedriver.js
+
+
+> electron@1.6.2 postinstall /home/agoston/Documents/stuff/mattermost/desktop-3.7.0/node_modules/electron
+> node install.js
+
+
+> mattermost-desktop@3.7.0 postinstall /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
+> install-app-deps && npm run extract-dict
+
+Using electron-builder.json configuration file
+Installing app dependencies for arch x64 to /home/agoston/Documents/stuff/mattermost/desktop-3.7.0/src
+
+> mattermost-desktop@3.7.0 extract-dict /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
+> node scripts/extract_dict.js src/node_modules/simple-spellchecker/dict
+
+
+7-Zip (a) [64] 15.14 : Copyright (c) 1999-2015 Igor Pavlov : 2015-12-31
+p7zip Version 15.14.1 (locale=C,Utf16=off,HugeFiles=on,64 bits,4 CPUs Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz (40651),ASM,AES-NI)
+
+Scanning the drive for archives:
+7 files, 5994872 bytes (5855 KiB)
+
+Extracting archive: de-DE.zip
+--
+Path = de-DE.zip
+Type = zip
+Physical Size = 741466
+
+Everything is Ok
+
+Extracting archive: en-GB.zip
+--
+Path = en-GB.zip
+Type = zip
+Physical Size = 296173
+
+Everything is Ok
+
+Extracting archive: en-US.zip
+--
+Path = en-US.zip
+Type = zip
+Physical Size = 338498
+
+Everything is Ok
+
+Extracting archive: es-ES.zip
+--
+Path = es-ES.zip
+Type = zip
+Physical Size = 1218846
+
+Everything is Ok
+
+Extracting archive: es-MX.zip
+--
+Path = es-MX.zip
+Type = zip
+Physical Size = 1276280
+
+Everything is Ok
+
+Extracting archive: fr-FR.zip
+--
+Path = fr-FR.zip
+Type = zip
+Physical Size = 1397961
+
+Everything is Ok
+
+Extracting archive: nl-NL.zip
+--
+Path = nl-NL.zip
+Type = zip
+Physical Size = 725648
+
+Everything is Ok
+
+Archives: 7
+OK archives: 7
+Files: 7
+Size:       33149241
+Compressed: 5994872
+mattermost-desktop@3.7.0 /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
++-- 7zip-bin@2.1.0 
+| `-- 7zip-bin-linux@1.1.0 
++-- babel-core@6.25.0 
+| +-- babel-code-frame@6.22.0 
+| | `-- js-tokens@3.0.2 
+| +-- babel-generator@6.25.0 
+| | +-- detect-indent@4.0.0 
+| | | `-- repeating@2.0.1 
+| | |   `-- is-finite@1.0.2 
+| | +-- jsesc@1.3.0 
+| | `-- trim-right@1.0.1 
+| +-- babel-helpers@6.24.1 
+| +-- babel-messages@6.23.0 
+| +-- babel-register@6.24.1 
+| | +-- core-js@2.4.1 
+| | +-- home-or-tmp@2.0.0 
+| | | `-- os-tmpdir@1.0.2 
+| | `-- source-map-support@0.4.15 
+| +-- babel-runtime@6.23.0 
+| | `-- regenerator-runtime@0.10.5 
+| +-- babel-template@6.25.0 
+| +-- babel-traverse@6.25.0 
+| | `-- invariant@2.2.2 
+| |   `-- loose-envify@1.3.1 
+| +-- babel-types@6.25.0 
+| | `-- to-fast-properties@1.0.3 
+| +-- babylon@6.17.4 
+| +-- convert-source-map@1.5.0 
+| +-- debug@2.6.8 
+| | `-- ms@2.0.0 
+| +-- json5@0.5.1 
+| +-- lodash@4.17.4 
+| +-- minimatch@3.0.4 
+| | `-- brace-expansion@1.1.8 
+| |   +-- balanced-match@1.0.0 
+| |   `-- concat-map@0.0.1 
+| +-- path-is-absolute@1.0.1 
+| +-- private@0.1.7 
+| +-- slash@1.0.0 
+| `-- source-map@0.5.6 
++-- babel-eslint@7.2.3 
++-- babel-loader@6.4.1 
+| +-- find-cache-dir@0.1.1 
+| | +-- commondir@1.0.1 
+| | `-- pkg-dir@1.0.0 
+| |   `-- find-up@1.1.2 
+| +-- loader-utils@0.2.17 
+| | +-- big.js@3.1.3 
+| | `-- emojis-list@2.1.0 
+| +-- mkdirp@0.5.1 
+| | `-- minimist@0.0.8 
+| `-- object-assign@4.1.1 
++-- babel-plugin-transform-object-rest-spread@6.23.0 
+| `-- babel-plugin-syntax-object-rest-spread@6.13.0 
++-- babel-preset-react@6.24.1 
+| +-- babel-plugin-syntax-jsx@6.18.0 
+| +-- babel-plugin-transform-react-display-name@6.25.0 
+| +-- babel-plugin-transform-react-jsx@6.24.1 
+| | `-- babel-helper-builder-react-jsx@6.24.1 
+| +-- babel-plugin-transform-react-jsx-self@6.22.0 
+| +-- babel-plugin-transform-react-jsx-source@6.22.0 
+| `-- babel-preset-flow@6.23.0 
+|   `-- babel-plugin-transform-flow-strip-types@6.22.0 
+|     `-- babel-plugin-syntax-flow@6.18.0 
++-- chai@3.5.0 
+| +-- assertion-error@1.0.2 
+| +-- deep-eql@0.1.3 
+| | `-- type-detect@0.1.1 
+| `-- type-detect@1.0.0 
++-- cross-env@3.2.4 
+| +-- cross-spawn@5.1.0 
+| | +-- lru-cache@4.1.1 
+| | | +-- pseudomap@1.0.2 
+| | | `-- yallist@2.1.2 
+| | +-- shebang-command@1.2.0 
+| | | `-- shebang-regex@1.0.0 
+| | `-- which@1.2.14 
+| |   `-- isexe@2.0.0 
+| `-- is-windows@1.0.1 
++-- devtron@1.4.0 
+| +-- accessibility-developer-tools@2.12.0 
+| +-- highlight.js@9.12.0 
+| `-- humanize-plus@1.8.2 
++-- electron@1.6.2 
+| +-- electron-download@3.3.0 
+| | +-- fs-extra@0.30.0 
+| | | +-- jsonfile@2.4.0 
+| | | `-- klaw@1.3.1 
+| | +-- home-path@1.0.5 
+| | +-- minimist@1.2.0 
+| | +-- nugget@2.0.1 
+| | | +-- minimist@1.2.0 
+| | | +-- pretty-bytes@1.0.4 
+| | | | `-- get-stdin@4.0.1 
+| | | +-- progress-stream@1.2.0 
+| | | | +-- speedometer@0.1.4 
+| | | | `-- through2@0.2.3 
+| | | |   `-- xtend@2.1.2 
+| | | |     `-- object-keys@0.4.0 
+| | | +-- single-line-log@1.1.2 
+| | | `-- throttleit@0.0.2 
+| | +-- path-exists@2.1.0 
+| | +-- rc@1.2.1 
+| | | +-- deep-extend@0.4.2 
+| | | `-- minimist@1.2.0 
+| | `-- sumchecker@1.3.1 
+| |   `-- es6-promise@4.1.1 
+| `-- extract-zip@1.6.5 
+|   +-- debug@2.2.0 
+|   | `-- ms@0.7.1 
+|   +-- mkdirp@0.5.0 
+|   `-- yauzl@2.4.1 
+|     `-- fd-slicer@1.0.1 
+|       `-- pend@1.2.0 
++-- electron-builder@14.5.3 
+| +-- UNMET PEER DEPENDENCY ajv@5.2.2
+| | +-- co@4.6.0 
+| | +-- fast-deep-equal@1.0.0 
+| | `-- json-schema-traverse@0.3.1 
+| +-- ajv-keywords@2.1.0 
+| +-- asar@0.13.0 
+| | +-- commander@2.11.0 
+| | +-- glob@6.0.4 
+| | +-- mksnapshot@0.3.1 
+| | | +-- decompress-zip@0.3.0 
+| | | | +-- binary@0.3.0 
+| | | | | +-- buffers@0.1.1 
+| | | | | `-- chainsaw@0.1.0 
+| | | | |   `-- traverse@0.3.9 
+| | | | +-- mkpath@0.1.0 
+| | | | +-- nopt@3.0.6 
+| | | | | `-- abbrev@1.1.0 
+| | | | +-- readable-stream@1.1.14 
+| | | | | `-- isarray@0.0.1 
+| | | | `-- touch@0.0.3 
+| | | |   `-- nopt@1.0.10 
+| | | `-- fs-extra@0.26.7 
+| | `-- tmp@0.0.28 
+| +-- bluebird-lst@1.0.2 
+| | `-- bluebird@3.5.0 
+| +-- chalk@1.1.3 
+| | +-- ansi-styles@2.2.1 
+| | +-- has-ansi@2.0.0 
+| | `-- supports-color@2.0.0 
+| +-- chromium-pickle-js@0.2.0 
+| +-- cuint@0.2.2 
+| +-- electron-builder-core@13.6.0 
+| +-- electron-builder-http@13.10.1 
+| | `-- debug@2.6.1 
+| |   `-- ms@0.7.2 
+| +-- electron-builder-util@13.10.1 
+| | +-- debug@2.6.1 
+| | | `-- ms@0.7.2 
+| | +-- ini@1.3.4 
+| | +-- node-emoji@1.7.0 
+| | | +-- lodash.toarray@4.4.0 
+| | | `-- string.prototype.codepointat@0.2.0 
+| | +-- stat-mode@0.2.2 
+| | `-- tunnel-agent@0.4.3 
+| +-- electron-download-tf@4.0.0 
+| | +-- fs-extra@2.1.2 
+| | +-- minimist@1.2.0 
+| | +-- path-exists@3.0.0 
+| | `-- sumchecker@2.0.2 
+| +-- electron-macos-sign@1.6.0 
+| | `-- compare-version@0.1.2 
+| +-- electron-publish@13.10.1 
+| | `-- progress-ex@2.0.0 
+| +-- fs-extra-p@4.3.0 
+| | `-- fs-extra@3.0.1 
+| |   +-- jsonfile@3.0.1 
+| |   `-- universalify@0.1.0 
+| +-- hosted-git-info@2.5.0 
+| +-- is-ci@1.0.10 
+| | `-- ci-info@1.0.0 
+| +-- isbinaryfile@3.0.2 
+| +-- js-yaml@3.9.0 
+| | +-- argparse@1.0.9 
+| | | `-- sprintf-js@1.0.3 
+| | `-- esprima@4.0.0 
+| +-- node-forge@0.7.1 
+| +-- normalize-package-data@2.4.0 
+| | +-- is-builtin-module@1.0.0 
+| | | `-- builtin-modules@1.1.1 
+| | `-- validate-npm-package-license@3.0.1 
+| |   +-- spdx-correct@1.0.2 
+| |   | `-- spdx-license-ids@1.2.2 
+| |   `-- spdx-expression-parse@1.0.4 
+| +-- parse-color@1.0.0 
+| | `-- color-convert@0.5.3 
+| +-- plist@2.1.0 
+| | +-- base64-js@1.2.0 
+| | +-- xmlbuilder@8.2.2 
+| | `-- xmldom@0.1.27 
+| +-- sanitize-filename@1.6.1 
+| | `-- truncate-utf8-bytes@1.0.2 
+| |   `-- utf8-byte-length@1.0.4 
+| +-- semver@5.3.0 
+| +-- update-notifier@2.2.0 
+| | +-- boxen@1.2.0 
+| | | +-- ansi-align@2.0.0 
+| | | | `-- string-width@2.1.0 
+| | | |   +-- is-fullwidth-code-point@2.0.0 
+| | | |   `-- strip-ansi@4.0.0 
+| | | |     `-- ansi-regex@3.0.0 
+| | | +-- camelcase@4.1.0 
+| | | +-- chalk@2.0.1 
+| | | | +-- ansi-styles@3.1.0 
+| | | | | `-- color-convert@1.9.0 
+| | | | |   `-- color-name@1.1.2 
+| | | | `-- supports-color@4.2.0 
+| | | |   `-- has-flag@2.0.0 
+| | | +-- cli-boxes@1.0.0 
+| | | +-- string-width@2.1.0 
+| | | | +-- is-fullwidth-code-point@2.0.0 
+| | | | `-- strip-ansi@4.0.0 
+| | | |   `-- ansi-regex@3.0.0 
+| | | +-- term-size@1.2.0 
+| | | | `-- execa@0.7.0 
+| | | |   +-- get-stream@3.0.0 
+| | | |   +-- is-stream@1.1.0 
+| | | |   +-- npm-run-path@2.0.2 
+| | | |   | `-- path-key@2.0.1 
+| | | |   +-- p-finally@1.0.0 
+| | | |   `-- strip-eof@1.0.0 
+| | | `-- widest-line@1.0.0 
+| | +-- configstore@3.1.0 
+| | | +-- dot-prop@4.1.1 
+| | | | `-- is-obj@1.0.1 
+| | | +-- make-dir@1.0.0 
+| | | +-- unique-string@1.0.0 
+| | | | `-- crypto-random-string@1.0.0 
+| | | `-- write-file-atomic@2.1.0 
+| | |   `-- slide@1.1.6 
+| | +-- import-lazy@2.1.0 
+| | +-- is-npm@1.0.0 
+| | +-- latest-version@3.1.0 
+| | | `-- package-json@4.0.1 
+| | |   +-- got@6.7.1 
+| | |   | +-- create-error-class@3.0.2 
+| | |   | | `-- capture-stack-trace@1.0.0 
+| | |   | +-- duplexer3@0.1.4 
+| | |   | +-- is-redirect@1.0.0 
+| | |   | +-- is-retry-allowed@1.1.0 
+| | |   | +-- lowercase-keys@1.0.0 
+| | |   | +-- timed-out@4.0.1 
+| | |   | +-- unzip-response@2.0.1 
+| | |   | `-- url-parse-lax@1.0.0 
+| | |   |   `-- prepend-http@1.0.4 
+| | |   +-- registry-auth-token@3.3.1 
+| | |   `-- registry-url@3.1.0 
+| | +-- semver-diff@2.1.0 
+| | `-- xdg-basedir@3.0.0 
+| +-- uuid-1345@0.99.6 
+| | `-- macaddress@0.2.8 
+| `-- yargs@6.6.0 
+|   +-- camelcase@3.0.0 
+|   +-- cliui@3.2.0 
+|   | `-- wrap-ansi@2.1.0 
+|   +-- decamelize@1.2.0 
+|   +-- get-caller-file@1.0.2 
+|   +-- os-locale@1.4.0 
+|   | `-- lcid@1.0.0 
+|   |   `-- invert-kv@1.0.0 
+|   +-- read-pkg-up@1.0.1 
+|   | `-- read-pkg@1.1.0 
+|   |   +-- load-json-file@1.1.0 
+|   |   | `-- strip-bom@2.0.0 
+|   |   |   `-- is-utf8@0.2.1 
+|   |   `-- path-type@1.1.0 
+|   +-- require-directory@2.1.1 
+|   +-- require-main-filename@1.0.1 
+|   +-- set-blocking@2.0.0 
+|   +-- string-width@1.0.2 
+|   | +-- code-point-at@1.1.0 
+|   | `-- is-fullwidth-code-point@1.0.0 
+|   |   `-- number-is-nan@1.0.1 
+|   +-- which-module@1.0.0 
+|   +-- y18n@3.2.1 
+|   `-- yargs-parser@4.2.1 
+|     `-- camelcase@3.0.0 
++-- electron-builder-squirrel-windows@15.6.3 
+| +-- archiver@1.3.0 
+| | +-- archiver-utils@1.3.0 
+| | | +-- lazystream@1.0.0 
+| | | | `-- readable-stream@2.3.3 
+| | | |   +-- isarray@1.0.0 
+| | | |   `-- string_decoder@1.0.3 
+| | | +-- normalize-path@2.1.1 
+| | | | `-- remove-trailing-separator@1.0.2 
+| | | `-- readable-stream@2.3.3 
+| | |   +-- isarray@1.0.0 
+| | |   `-- string_decoder@1.0.3 
+| | +-- buffer-crc32@0.2.13 
+| | +-- readable-stream@2.3.3 
+| | | +-- core-util-is@1.0.2 
+| | | +-- isarray@1.0.0 
+| | | +-- process-nextick-args@1.0.7 
+| | | +-- string_decoder@1.0.3 
+| | | `-- util-deprecate@1.0.2 
+| | +-- tar-stream@1.5.4 
+| | | +-- bl@1.2.1 
+| | | | `-- readable-stream@2.3.3 
+| | | |   +-- isarray@1.0.0 
+| | | |   `-- string_decoder@1.0.3 
+| | | +-- end-of-stream@1.4.0 
+| | | +-- readable-stream@2.3.3 
+| | | | +-- isarray@1.0.0 
+| | | | `-- string_decoder@1.0.3 
+| | | `-- xtend@4.0.1 
+| | +-- walkdir@0.0.11 
+| | `-- zip-stream@1.2.0 
+| |   +-- compress-commons@1.2.0 
+| |   | +-- crc32-stream@2.0.0 
+| |   | | +-- crc@3.4.4 
+| |   | | `-- readable-stream@2.3.3 
+| |   | |   +-- isarray@1.0.0 
+| |   | |   `-- string_decoder@1.0.3 
+| |   | `-- readable-stream@2.3.3 
+| |   |   +-- isarray@1.0.0 
+| |   |   `-- string_decoder@1.0.3 
+| |   `-- readable-stream@2.3.3 
+| |     +-- isarray@1.0.0 
+| |     `-- string_decoder@1.0.3 
+| +-- electron-builder-core@15.5.1 
+| `-- electron-builder-util@15.6.3 
+|   +-- debug@2.6.3 
+|   | `-- ms@0.7.2 
+|   +-- electron-builder-http@15.6.3 
+|   `-- tunnel-agent@0.6.0 
++-- electron-connect@0.6.1 
+| +-- tree-kill@1.1.0 
+| `-- ws@1.1.4 
+|   +-- options@0.0.6 
+|   `-- ultron@1.0.2 
++-- eslint@3.19.0 
+| +-- concat-stream@1.6.0 
+| | +-- inherits@2.0.3 
+| | +-- readable-stream@2.3.3 
+| | | +-- isarray@1.0.0 
+| | | `-- string_decoder@1.0.3 
+| | `-- typedarray@0.0.6 
+| +-- doctrine@2.0.0 
+| | `-- isarray@1.0.0 
+| +-- escope@3.6.0 
+| | +-- es6-map@0.1.5 
+| | | +-- d@1.0.0 
+| | | +-- es5-ext@0.10.24 
+| | | +-- es6-iterator@2.0.1 
+| | | +-- es6-set@0.1.5 
+| | | +-- es6-symbol@3.1.1 
+| | | `-- event-emitter@0.3.5 
+| | +-- es6-weak-map@2.0.2 
+| | `-- esrecurse@4.2.0 
+| +-- espree@3.4.3 
+| | `-- acorn-jsx@3.0.1 
+| |   `-- acorn@3.3.0 
+| +-- esquery@1.0.0 
+| +-- estraverse@4.2.0 
+| +-- esutils@2.0.2 
+| +-- file-entry-cache@2.0.0 
+| | `-- flat-cache@1.2.2 
+| |   +-- circular-json@0.3.1 
+| |   +-- del@2.2.2 
+| |   | `-- globby@5.0.0 
+| |   `-- write@0.2.1 
+| +-- glob@7.1.2 
+| | +-- fs.realpath@1.0.0 
+| | +-- inflight@1.0.6 
+| | | `-- wrappy@1.0.2 
+| | `-- once@1.4.0 
+| +-- globals@9.18.0 
+| +-- ignore@3.3.3 
+| +-- imurmurhash@0.1.4 
+| +-- inquirer@0.12.0 
+| | +-- ansi-escapes@1.4.0 
+| | +-- ansi-regex@2.1.1 
+| | +-- cli-cursor@1.0.2 
+| | | `-- restore-cursor@1.0.1 
+| | |   +-- exit-hook@1.1.1 
+| | |   `-- onetime@1.1.0 
+| | +-- cli-width@2.1.0 
+| | +-- figures@1.7.0 
+| | +-- readline2@1.0.1 
+| | | `-- mute-stream@0.0.5 
+| | +-- run-async@0.1.0 
+| | +-- rx-lite@3.1.2 
+| | `-- through@2.3.8 
+| +-- is-my-json-valid@2.16.0 
+| | +-- generate-function@2.0.0 
+| | +-- generate-object-property@1.2.0 
+| | | `-- is-property@1.0.2 
+| | +-- jsonpointer@4.0.1 
+| | `-- xtend@4.0.1 
+| +-- is-resolvable@1.0.0 
+| | `-- tryit@1.0.3 
+| +-- json-stable-stringify@1.0.1 
+| | `-- jsonify@0.0.0 
+| +-- levn@0.3.0 
+| | +-- prelude-ls@1.1.2 
+| | `-- type-check@0.3.2 
+| +-- natural-compare@1.4.0 
+| +-- optionator@0.8.2 
+| | +-- deep-is@0.1.3 
+| | +-- fast-levenshtein@2.0.6 
+| | `-- wordwrap@1.0.0 
+| +-- path-is-inside@1.0.2 
+| +-- pluralize@1.2.1 
+| +-- progress@1.1.8 
+| +-- require-uncached@1.0.3 
+| | +-- caller-path@0.1.0 
+| | | `-- callsites@0.2.0 
+| | `-- resolve-from@1.0.1 
+| +-- shelljs@0.7.8 
+| | `-- rechoir@0.6.2 
+| |   `-- resolve@1.3.3 
+| |     `-- path-parse@1.0.5 
+| +-- strip-bom@3.0.0 
+| +-- strip-json-comments@2.0.1 
+| +-- table@3.8.3 
+| | +-- ajv-keywords@1.5.1 
+| | +-- slice-ansi@0.0.4 
+| | `-- string-width@2.1.0 
+| |   +-- is-fullwidth-code-point@2.0.0 
+| |   `-- strip-ansi@4.0.0 
+| |     `-- ansi-regex@3.0.0 
+| +-- text-table@0.2.0 
+| `-- user-home@2.0.0 
+|   `-- os-homedir@1.0.2 
++-- eslint-plugin-react@6.10.3 
+| +-- array.prototype.find@2.0.4 
+| | +-- define-properties@1.1.2 
+| | | +-- foreach@2.0.5 
+| | | `-- object-keys@1.0.11 
+| | `-- es-abstract@1.7.0 
+| |   +-- es-to-primitive@1.1.1 
+| |   | +-- is-date-object@1.0.1 
+| |   | `-- is-symbol@1.0.1 
+| |   +-- is-callable@1.1.3 
+| |   `-- is-regex@1.0.4 
+| +-- doctrine@1.5.0 
+| | `-- isarray@1.0.0 
+| +-- has@1.0.1 
+| | `-- function-bind@1.1.0 
+| +-- jsx-ast-utils@1.4.1 
+| `-- object.assign@4.0.4 
+|   `-- object-keys@1.0.11 
++-- UNMET PEER DEPENDENCY file-loader@*
++-- mocha@3.4.2 
+| +-- browser-stdout@1.3.0 
+| +-- commander@2.9.0 
+| | `-- graceful-readlink@1.0.1 
+| +-- debug@2.6.0 
+| | `-- ms@0.7.2 
+| +-- diff@3.2.0 
+| +-- escape-string-regexp@1.0.5 
+| +-- glob@7.1.1 
+| +-- growl@1.9.2 
+| +-- json3@3.3.2 
+| +-- lodash.create@3.1.1 
+| | +-- lodash._baseassign@3.2.0 
+| | | +-- lodash._basecopy@3.0.1 
+| | | `-- lodash.keys@3.1.2 
+| | |   +-- lodash._getnative@3.9.1 
+| | |   +-- lodash.isarguments@3.1.0 
+| | |   `-- lodash.isarray@3.0.4 
+| | +-- lodash._basecreate@3.0.3 
+| | `-- lodash._isiterateecall@3.0.9 
+| `-- supports-color@3.1.2 
+|   `-- has-flag@1.0.0 
++-- mocha-circleci-reporter@0.0.2 
+| `-- mocha-junit-reporter@1.13.0 
+|   +-- md5@2.2.1 
+|   | +-- charenc@0.0.2 
+|   | +-- crypt@0.0.2 
+|   | `-- is-buffer@1.1.5 
+|   `-- xml@1.0.1 
++-- npm-run-all@4.0.2 
+| +-- ps-tree@1.1.0 
+| | `-- event-stream@3.3.4 
+| |   +-- duplexer@0.1.1 
+| |   +-- from@0.1.7 
+| |   +-- map-stream@0.1.0 
+| |   +-- pause-stream@0.0.11 
+| |   +-- split@0.3.3 
+| |   `-- stream-combiner@0.0.4 
+| +-- read-pkg@2.0.0 
+| | +-- load-json-file@2.0.0 
+| | | +-- parse-json@2.2.0 
+| | | | `-- error-ex@1.3.1 
+| | | |   `-- is-arrayish@0.2.1 
+| | | +-- pify@2.3.0 
+| | | `-- strip-bom@3.0.0 
+| | `-- path-type@2.0.0 
+| +-- shell-quote@1.6.1 
+| | +-- array-filter@0.0.1 
+| | +-- array-map@0.0.0 
+| | `-- array-reduce@0.0.0 
+| `-- string.prototype.padend@3.0.0 
++-- spectron@3.6.4 
+| +-- dev-null@0.1.1 
+| +-- electron-chromedriver@1.6.0 
+| +-- request@2.81.0 
+| | +-- aws-sign2@0.6.0 
+| | +-- aws4@1.6.0 
+| | +-- caseless@0.12.0 
+| | +-- combined-stream@1.0.5 
+| | | `-- delayed-stream@1.0.0 
+| | +-- extend@3.0.1 
+| | +-- forever-agent@0.6.1 
+| | +-- form-data@2.1.4 
+| | | `-- asynckit@0.4.0 
+| | +-- har-validator@4.2.1 
+| | | `-- har-schema@1.0.5 
+| | +-- hawk@3.1.3 
+| | | +-- boom@2.10.1 
+| | | +-- cryptiles@2.0.5 
+| | | +-- hoek@2.16.3 
+| | | `-- sntp@1.0.9 
+| | +-- http-signature@1.1.1 
+| | | +-- assert-plus@0.2.0 
+| | | +-- jsprim@1.4.0 
+| | | | +-- assert-plus@1.0.0 
+| | | | +-- extsprintf@1.0.2 
+| | | | +-- json-schema@0.2.3 
+| | | | `-- verror@1.3.6 
+| | | `-- sshpk@1.13.1 
+| | |   +-- asn1@0.2.3 
+| | |   +-- assert-plus@1.0.0 
+| | |   +-- bcrypt-pbkdf@1.0.1 
+| | |   +-- dashdash@1.14.1 
+| | |   | `-- assert-plus@1.0.0 
+| | |   +-- ecc-jsbn@0.1.1 
+| | |   +-- getpass@0.1.7 
+| | |   | `-- assert-plus@1.0.0 
+| | |   +-- jsbn@0.1.1 
+| | |   `-- tweetnacl@0.14.5 
+| | +-- is-typedarray@1.0.0 
+| | +-- isstream@0.1.2 
+| | +-- json-stringify-safe@5.0.1 
+| | +-- mime-types@2.1.15 
+| | | `-- mime-db@1.27.0 
+| | +-- oauth-sign@0.8.2 
+| | +-- performance-now@0.2.0 
+| | +-- qs@6.4.0 
+| | +-- safe-buffer@5.1.1 
+| | +-- stringstream@0.0.5 
+| | +-- tough-cookie@2.3.2 
+| | `-- uuid@3.1.0 
+| +-- split@1.0.0 
+| `-- webdriverio@4.8.0 
+|   +-- css-parse@2.0.0 
+|   | `-- css@2.2.1 
+|   |   +-- source-map@0.1.43 
+|   |   | `-- amdefine@1.0.1 
+|   |   +-- source-map-resolve@0.3.1 
+|   |   | +-- atob@1.1.3 
+|   |   | +-- resolve-url@0.2.1 
+|   |   | `-- source-map-url@0.3.0 
+|   |   `-- urix@0.1.0 
+|   +-- css-value@0.0.1 
+|   +-- deepmerge@1.3.2 
+|   +-- ejs@2.5.6 
+|   +-- gaze@1.1.2 
+|   | `-- globule@1.2.0 
+|   +-- inquirer@3.0.6 
+|   | +-- cli-cursor@2.1.0 
+|   | | `-- restore-cursor@2.0.0 
+|   | |   `-- onetime@2.0.1 
+|   | |     `-- mimic-fn@1.1.0 
+|   | +-- external-editor@2.0.4 
+|   | | +-- iconv-lite@0.4.18 
+|   | | +-- jschardet@1.4.2 
+|   | | `-- tmp@0.0.31 
+|   | +-- figures@2.0.0 
+|   | +-- mute-stream@0.0.7 
+|   | +-- run-async@2.3.0 
+|   | | `-- is-promise@2.1.0 
+|   | +-- rx@4.1.0 
+|   | `-- string-width@2.1.0 
+|   |   +-- is-fullwidth-code-point@2.0.0 
+|   |   `-- strip-ansi@4.0.0 
+|   |     `-- ansi-regex@3.0.0 
+|   +-- npm-install-package@2.1.0 
+|   +-- optimist@0.6.1 
+|   | `-- wordwrap@0.0.3 
+|   +-- q@1.5.0 
+|   +-- rgb2hex@0.1.0 
+|   +-- safe-buffer@5.0.1 
+|   +-- supports-color@3.2.3 
+|   | `-- has-flag@1.0.0 
+|   +-- url@0.11.0 
+|   | +-- punycode@1.3.2 
+|   | `-- querystring@0.2.0 
+|   +-- validator@7.0.0 
+|   +-- wdio-dot-reporter@0.0.8 
+|   `-- wgxpath@1.0.0 
++-- url-loader@0.5.9 
+| +-- loader-utils@1.1.0 
+| `-- mime@1.3.6 
++-- webpack@2.7.0 
+| +-- acorn@5.1.1 
+| +-- acorn-dynamic-import@2.0.2 
+| | `-- acorn@4.0.13 
+| +-- ajv@4.11.8 
+| +-- ajv-keywords@1.5.1 
+| +-- async@2.5.0 
+| +-- enhanced-resolve@3.3.0 
+| | `-- graceful-fs@4.1.11 
+| +-- interpret@1.0.3 
+| +-- json-loader@0.5.4 
+| +-- loader-runner@2.3.0 
+| +-- memory-fs@0.4.1 
+| | +-- errno@0.1.4 
+| | | `-- prr@0.0.0 
+| | `-- readable-stream@2.3.3 
+| |   +-- isarray@1.0.0 
+| |   `-- string_decoder@1.0.3 
+| +-- node-libs-browser@2.0.0 
+| | +-- assert@1.4.1 
+| | +-- browserify-zlib@0.1.4 
+| | | `-- pako@0.2.9 
+| | +-- buffer@4.9.1 
+| | | +-- ieee754@1.1.8 
+| | | `-- isarray@1.0.0 
+| | +-- console-browserify@1.1.0 
+| | | `-- date-now@0.1.4 
+| | +-- constants-browserify@1.0.0 
+| | +-- crypto-browserify@3.11.1 
+| | | +-- browserify-cipher@1.0.0 
+| | | | +-- browserify-aes@1.0.6 
+| | | | | `-- buffer-xor@1.0.3 
+| | | | +-- browserify-des@1.0.0 
+| | | | | `-- des.js@1.0.0 
+| | | | `-- evp_bytestokey@1.0.0 
+| | | +-- browserify-sign@4.0.4 
+| | | | +-- bn.js@4.11.7 
+| | | | +-- browserify-rsa@4.0.1 
+| | | | +-- elliptic@6.4.0 
+| | | | | +-- brorand@1.1.0 
+| | | | | +-- hash.js@1.1.3 
+| | | | | +-- hmac-drbg@1.0.1 
+| | | | | `-- minimalistic-crypto-utils@1.0.1 
+| | | | `-- parse-asn1@5.1.0 
+| | | |   `-- asn1.js@4.9.1 
+| | | +-- create-ecdh@4.0.0 
+| | | +-- create-hash@1.1.3 
+| | | | +-- cipher-base@1.0.4 
+| | | | +-- ripemd160@2.0.1 
+| | | | | `-- hash-base@2.0.2 
+| | | | `-- sha.js@2.4.8 
+| | | +-- create-hmac@1.1.6 
+| | | +-- diffie-hellman@5.0.2 
+| | | | `-- miller-rabin@4.0.0 
+| | | +-- pbkdf2@3.0.12 
+| | | +-- public-encrypt@4.0.0 
+| | | `-- randombytes@2.0.5 
+| | +-- domain-browser@1.1.7 
+| | +-- events@1.1.1 
+| | +-- https-browserify@0.0.1 
+| | +-- os-browserify@0.2.1 
+| | +-- path-browserify@0.0.0 
+| | +-- process@0.11.10 
+| | +-- punycode@1.4.1 
+| | +-- querystring-es3@0.2.1 
+| | +-- readable-stream@2.3.3 
+| | | +-- isarray@1.0.0 
+| | | `-- string_decoder@1.0.3 
+| | +-- stream-browserify@2.0.1 
+| | | `-- readable-stream@2.3.3 
+| | |   +-- isarray@1.0.0 
+| | |   `-- string_decoder@1.0.3 
+| | +-- stream-http@2.7.2 
+| | | +-- builtin-status-codes@3.0.0 
+| | | +-- readable-stream@2.3.3 
+| | | | +-- isarray@1.0.0 
+| | | | `-- string_decoder@1.0.3 
+| | | +-- to-arraybuffer@1.0.1 
+| | | `-- xtend@4.0.1 
+| | +-- string_decoder@0.10.31 
+| | +-- timers-browserify@2.0.2 
+| | | `-- setimmediate@1.0.5 
+| | +-- tty-browserify@0.0.0 
+| | +-- util@0.10.3 
+| | | `-- inherits@2.0.1 
+| | `-- vm-browserify@0.0.4 
+| |   `-- indexof@0.0.1 
+| +-- supports-color@3.2.3 
+| | `-- has-flag@1.0.0 
+| +-- tapable@0.2.6 
+| +-- uglify-js@2.8.29 
+| | +-- uglify-to-browserify@1.0.2 
+| | `-- yargs@3.10.0 
+| |   +-- camelcase@1.2.1 
+| |   +-- cliui@2.1.0 
+| |   | +-- center-align@0.1.3 
+| |   | | +-- align-text@0.1.4 
+| |   | | | +-- longest@1.0.1 
+| |   | | | `-- repeat-string@1.6.1 
+| |   | | `-- lazy-cache@1.0.4 
+| |   | +-- right-align@0.1.3 
+| |   | `-- wordwrap@0.0.2 
+| |   `-- window-size@0.1.0 
+| +-- watchpack@1.3.1 
+| `-- webpack-sources@1.0.1 
+|   `-- source-list-map@2.0.0 
++-- webpack-dev-server@2.5.1 
+| +-- ansi-html@0.0.7 
+| +-- bonjour@3.5.0 
+| | +-- array-flatten@2.1.1 
+| | +-- deep-equal@1.0.1 
+| | +-- dns-equal@1.0.0 
+| | +-- dns-txt@2.0.2 
+| | | `-- buffer-indexof@1.1.0 
+| | +-- multicast-dns@6.1.1 
+| | | +-- dns-packet@1.1.1 
+| | | | `-- ip@1.1.5 
+| | | `-- thunky@0.1.0 
+| | `-- multicast-dns-service-types@1.1.0 
+| +-- chokidar@1.7.0 
+| | +-- anymatch@1.3.0 
+| | | `-- arrify@1.0.1 
+| | +-- async-each@1.0.1 
+| | +-- glob-parent@2.0.0 
+| | +-- is-binary-path@1.0.1 
+| | | `-- binary-extensions@1.8.0 
+| | +-- is-glob@2.0.1 
+| | | `-- is-extglob@1.0.0 
+| | `-- readdirp@2.1.0 
+| |   +-- readable-stream@2.3.3 
+| |   | +-- isarray@1.0.0 
+| |   | `-- string_decoder@1.0.3 
+| |   `-- set-immediate-shim@1.0.1 
+| +-- compression@1.7.0 
+| | +-- accepts@1.3.3 
+| | | `-- negotiator@0.6.1 
+| | +-- bytes@2.5.0 
+| | +-- compressible@2.0.10 
+| | +-- on-headers@1.0.1 
+| | `-- vary@1.1.1 
+| +-- connect-history-api-fallback@1.3.0 
+| +-- del@3.0.0 
+| | +-- globby@6.1.0 
+| | | +-- array-union@1.0.2 
+| | | | `-- array-uniq@1.0.3 
+| | | `-- pify@2.3.0 
+| | +-- is-path-cwd@1.0.0 
+| | +-- is-path-in-cwd@1.0.0 
+| | | `-- is-path-inside@1.0.0 
+| | +-- p-map@1.1.1 
+| | +-- pify@3.0.0 
+| | `-- rimraf@2.6.1 
+| +-- express@4.15.3 
+| | +-- array-flatten@1.1.1 
+| | +-- content-disposition@0.5.2 
+| | +-- content-type@1.0.2 
+| | +-- cookie@0.3.1 
+| | +-- cookie-signature@1.0.6 
+| | +-- debug@2.6.7 
+| | +-- depd@1.1.0 
+| | +-- encodeurl@1.0.1 
+| | +-- escape-html@1.0.3 
+| | +-- etag@1.8.0 
+| | +-- finalhandler@1.0.3 
+| | | +-- debug@2.6.7 
+| | | `-- unpipe@1.0.0 
+| | +-- fresh@0.5.0 
+| | +-- merge-descriptors@1.0.1 
+| | +-- methods@1.1.2 
+| | +-- on-finished@2.3.0 
+| | | `-- ee-first@1.1.1 
+| | +-- parseurl@1.3.1 
+| | +-- path-to-regexp@0.1.7 
+| | +-- proxy-addr@1.1.4 
+| | | +-- forwarded@0.1.0 
+| | | `-- ipaddr.js@1.3.0 
+| | +-- range-parser@1.2.0 
+| | +-- send@0.15.3 
+| | | +-- debug@2.6.7 
+| | | +-- destroy@1.0.4 
+| | | `-- mime@1.3.4 
+| | +-- serve-static@1.12.3 
+| | +-- setprototypeof@1.0.3 
+| | +-- statuses@1.3.1 
+| | +-- type-is@1.6.15 
+| | | `-- media-typer@0.3.0 
+| | `-- utils-merge@1.0.0 
+| +-- html-entities@1.2.1 
+| +-- http-proxy-middleware@0.17.4 
+| | +-- http-proxy@1.16.2 
+| | | +-- eventemitter3@1.2.0 
+| | | `-- requires-port@1.0.0 
+| | +-- is-glob@3.1.0 
+| | | `-- is-extglob@2.1.1 
+| | `-- micromatch@2.3.11 
+| |   +-- arr-diff@2.0.0 
+| |   | `-- arr-flatten@1.1.0 
+| |   +-- array-unique@0.2.1 
+| |   +-- braces@1.8.5 
+| |   | +-- expand-range@1.8.2 
+| |   | | `-- fill-range@2.2.3 
+| |   | |   +-- is-number@2.1.0 
+| |   | |   +-- isobject@2.1.0 
+| |   | |   | `-- isarray@1.0.0 
+| |   | |   `-- randomatic@1.1.7 
+| |   | |     +-- is-number@3.0.0 
+| |   | |     | `-- kind-of@3.2.2 
+| |   | |     `-- kind-of@4.0.0 
+| |   | +-- preserve@0.2.0 
+| |   | `-- repeat-element@1.1.2 
+| |   +-- expand-brackets@0.1.5 
+| |   | `-- is-posix-bracket@0.1.1 
+| |   +-- extglob@0.3.2 
+| |   +-- filename-regex@2.0.1 
+| |   +-- kind-of@3.2.2 
+| |   +-- object.omit@2.0.1 
+| |   | +-- for-own@0.1.5 
+| |   | | `-- for-in@1.0.2 
+| |   | `-- is-extendable@0.1.1 
+| |   +-- parse-glob@3.0.4 
+| |   | +-- glob-base@0.3.0 
+| |   | `-- is-dotfile@1.0.3 
+| |   `-- regex-cache@0.4.3 
+| |     +-- is-equal-shallow@0.1.3 
+| |     `-- is-primitive@2.0.0 
+| +-- internal-ip@1.2.0 
+| | `-- meow@3.7.0 
+| |   +-- camelcase-keys@2.1.0 
+| |   | `-- camelcase@2.1.1 
+| |   +-- loud-rejection@1.6.0 
+| |   | +-- currently-unhandled@0.4.1 
+| |   | | `-- array-find-index@1.0.2 
+| |   | `-- signal-exit@3.0.2 
+| |   +-- map-obj@1.0.1 
+| |   +-- minimist@1.2.0 
+| |   +-- redent@1.0.0 
+| |   | +-- indent-string@2.1.0 
+| |   | `-- strip-indent@1.0.1 
+| |   `-- trim-newlines@1.0.0 
+| +-- opn@4.0.2 
+| | `-- pinkie-promise@2.0.1 
+| |   `-- pinkie@2.0.4 
+| +-- portfinder@1.0.13 
+| | `-- async@1.5.2 
+| +-- selfsigned@1.9.1 
+| | `-- node-forge@0.6.33 
+| +-- serve-index@1.9.0 
+| | +-- batch@0.6.1 
+| | `-- http-errors@1.6.1 
+| +-- sockjs@0.3.18 
+| | +-- faye-websocket@0.10.0 
+| | | `-- websocket-driver@0.6.5 
+| | |   `-- websocket-extensions@0.1.1 
+| | `-- uuid@2.0.3 
+| +-- sockjs-client@1.1.2 
+| | +-- eventsource@0.1.6 
+| | | `-- original@1.0.0 
+| | |   `-- url-parse@1.0.5 
+| | |     `-- querystringify@0.0.4 
+| | +-- faye-websocket@0.11.1 
+| | `-- url-parse@1.1.9 
+| |   `-- querystringify@1.0.0 
+| +-- spdy@3.4.7 
+| | +-- handle-thing@1.2.5 
+| | +-- http-deceiver@1.2.7 
+| | +-- select-hose@2.0.0 
+| | `-- spdy-transport@2.0.20 
+| |   +-- detect-node@2.0.3 
+| |   +-- hpack.js@2.1.6 
+| |   | `-- readable-stream@2.3.3 
+| |   |   +-- isarray@1.0.0 
+| |   |   `-- string_decoder@1.0.3 
+| |   +-- obuf@1.1.1 
+| |   +-- readable-stream@2.3.3 
+| |   | +-- isarray@1.0.0 
+| |   | `-- string_decoder@1.0.3 
+| |   `-- wbuf@1.7.2 
+| |     `-- minimalistic-assert@1.0.0 
+| +-- strip-ansi@3.0.1 
+| +-- supports-color@3.2.3 
+| | `-- has-flag@1.0.0 
+| `-- webpack-dev-middleware@1.11.0 
+`-- webpack-merge@3.0.0 
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: 7zip-bin-win@^2.1.0 (node_modules/7zip-bin/node_modules/7zip-bin-win):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for 7zip-bin-win@2.1.0: wanted {"os":"win32","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: 7zip-bin-mac@^1.0.1 (node_modules/7zip-bin/node_modules/7zip-bin-mac):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for 7zip-bin-mac@1.0.1: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN url-loader@0.5.9 requires a peer of file-loader@* but none was installed.
+npm WARN ajv-keywords@2.1.0 requires a peer of ajv@>=5.0.0 but none was installed.
++ npm run build
+
+> mattermost-desktop@3.7.0 build /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
+> npm-run-all build:*
+
+
+> mattermost-desktop@3.7.0 build:main /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
+> cross-env NODE_ENV=production webpack --bail --config webpack.config.main.js
+
+Hash: 39e60f46ea24c2a341d7
+Version: webpack 2.7.0
+Time: 986ms
+               Asset    Size  Chunks                    Chunk Names
+./src/main_bundle.js  481 kB       0  [emitted]  [big]  main
+  [44] ./src/common/osVersion.js 378 bytes {0} [built]
+  [45] ./src/common/settings.js 2.1 kB {0} [built]
+  [46] ./src/main/SpellChecker.js 2.99 kB {0} [built]
+  [47] ./src/main/allowProtocolDialog.js 1.55 kB {0} [built]
+  [48] ./src/main/certificateStore.js 1.59 kB {0} [built]
+  [49] ./src/main/downloadURL.js 1.53 kB {0} [built]
+  [50] ./src/main/mainWindow.js 3.42 kB {0} [built]
+  [51] ./src/main/menus/app.js 5.68 kB {0} [built]
+  [52] ./src/main/menus/tray.js 1.33 kB {0} [built]
+  [53] ./src/~/auto-launch/dist/index.js 3.21 kB {0} [built]
+  [54] ./src/~/electron-devtools-installer/dist/index.js 4.63 kB {0} [built]
+  [55] ./src/~/electron-is-dev/index.js 154 bytes {0} [built]
+  [56] ./src/~/electron-squirrel-startup/index.js 1.03 kB {0} [built]
+  [57] ./src/~/yargs/index.js 17 kB {0} [built]
+  [58] ./src/main.js 17.3 kB {0} [built]
+    + 109 hidden modules
+
+WARNING in ./src/~/yargs/lib/parser.js
+359:21-48 Critical dependency: the request of a dependency is an expression
+
+> mattermost-desktop@3.7.0 build:renderer /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
+> cross-env NODE_ENV=production webpack --bail --config webpack.config.renderer.js
+
+(node:3011) DeprecationWarning: loaderUtils.parseQuery() received a non-string value which can be problematic, see https://github.com/webpack/loader-utils/issues/56
+parseQuery() will be replaced with getOptions() in the next major version of loader-utils.
+Hash: e4c145cebca5144215d2
+Version: webpack 2.7.0
+Time: 4628ms
+                       Asset     Size  Chunks                    Chunk Names
+          settings_bundle.js  1.66 MB       0  [emitted]  [big]  settings
+             index_bundle.js   1.6 MB       1  [emitted]  [big]  index
+webview/mattermost_bundle.js   112 kB       2  [emitted]         webview/mattermost
+   [0] ./src/~/react/react.js 56 bytes {0} {1} [built]
+  [18] ./src/~/react-dom/index.js 59 bytes {0} {1} [built]
+  [49] ./src/~/react/lib/React.js 5.08 kB {0} {1} [built]
+  [51] ./src/~/react-bootstrap/es/index.js 4.85 kB {0} {1} [built]
+ [206] ./src/browser/js/contextMenu.js 2 kB {0} {1} [built]
+ [371] ./src/~/react-dom/lib/ReactDOM.js 5.17 kB {0} {1} [built]
+ [459] ./src/browser/config/AppConfig.js 479 bytes {1} [built]
+ [460] ./src/browser/js/badge.js 702 bytes {1} [built]
+ [461] ./src/browser/js/notification.js 3.15 kB {2} [built]
+ [472] ./src/browser/index.jsx 3.42 kB {1} [built]
+ [473] ./src/browser/settings.jsx 789 bytes {0} [built]
+ [474] ./src/assets/ding.mp3 46.4 kB {2} [built]
+ [475] ./src/browser/webview/mattermost.js 5.39 kB {2} [built]
+ [476] ./src/common/osVersion.js 378 bytes {2} [built]
+ [482] ./src/~/auto-launch/dist/index.js 3.21 kB {0} [built]
+    + 479 hidden modules
++ npm run package:linux
+
+> mattermost-desktop@3.7.0 package:linux /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
+> build --linux --x64 --ia32 --em.name=mattermost-desktop --publish=never
+
+Using electron-builder.json configuration file
+No native production dependencies
+Packaging for linux x64 using electron 1.6.2 to release/linux-unpacked
+Building tar.gz
+No native production dependencies
+Packaging for linux ia32 using electron 1.6.2 to release/linux-ia32-unpacked
+Building tar.gz
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.v4kGcb
++ umask 022
++ cd /home/agoston/Documents/stuff/mattermost
++ '[' /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64 '!=' / ']'
++ rm -rf /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64
+++ dirname /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64
++ mkdir -p /home/agoston/rpmbuild/BUILDROOT
++ mkdir /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64
++ cd desktop-3.7.0
++ mkdir -p /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64//usr/lib64/
++ mkdir -p /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64//usr/bin/
++ cp -r release/linux-unpacked /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64//usr/lib64/
++ ln -s /usr/lib64/mattermost-desktop /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64//usr/bin/mattermost-desktop
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/brp-compress
++ /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
++ /usr/lib/rpm/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: mattermost-desktop-3.7.0-1.fc26.x86_64
+error: File not found: /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/bin/*
+error: File not found: /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/lib64/*
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.Us0QgM
++ umask 022
++ cd /home/agoston/Documents/stuff/mattermost
++ cd desktop-3.7.0
++ DOCDIR=/home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/share/doc/mattermost-desktop
++ export DOCDIR
++ /usr/bin/mkdir -p /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/share/doc/mattermost-desktop
++ cp -pr README.md /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/share/doc/mattermost-desktop
++ exit 0
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.c0MFln
++ umask 022
++ cd /home/agoston/Documents/stuff/mattermost
++ cd desktop-3.7.0
++ LICENSEDIR=/home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/share/licenses/mattermost-desktop
++ export LICENSEDIR
++ /usr/bin/mkdir -p /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/share/licenses/mattermost-desktop
++ cp -pr LICENSE.txt /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/share/licenses/mattermost-desktop
++ exit 0
+
+
+RPM build errors:
+    File not found: /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/bin/*
+    File not found: /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/lib64/*
