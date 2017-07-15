@@ -1,19 +1,19 @@
 
 
-Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.XwT5m8
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.iPHQ2W
 + umask 022
 + cd /home/agoston/Documents/stuff/mattermost
 + cd /home/agoston/Documents/stuff/mattermost
 + rm -rf desktop-3.7.0
-+ /usr/bin/tar -xof -
 + /usr/bin/gzip -dc /home/agoston/Documents/stuff/mattermost/v3.7.0.tar.gz
++ /usr/bin/tar -xof -
 + STATUS=0
 + '[' 0 -ne 0 ']'
 + cd desktop-3.7.0
 + /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
 + sed -i -e '/^[[:space:]]*"target": \[/!b' -e '$!N;s/\n[[:space:]]*"deb",//' electron-builder.json
 + exit 0
-Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.NohFO2
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.kRITup
 + umask 022
 + cd /home/agoston/Documents/stuff/mattermost
 + cd desktop-3.7.0
@@ -808,7 +808,7 @@ mattermost-desktop@3.7.0 /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
 | |   | +-- right-align@0.1.3 
 | |   | `-- wordwrap@0.0.2 
 | |   `-- window-size@0.1.0 
-| +-- watchpack@1.3.1 
+| +-- watchpack@1.4.0 
 | `-- webpack-sources@1.0.1 
 |   `-- source-list-map@2.0.0 
 +-- webpack-dev-server@2.5.1 
@@ -989,10 +989,10 @@ mattermost-desktop@3.7.0 /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
 | `-- webpack-dev-middleware@1.11.0 
 `-- webpack-merge@3.0.0 
 
-npm WARN optional SKIPPING OPTIONAL DEPENDENCY: 7zip-bin-win@^2.1.0 (node_modules/7zip-bin/node_modules/7zip-bin-win):
-npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for 7zip-bin-win@2.1.0: wanted {"os":"win32","arch":"any"} (current: {"os":"linux","arch":"x64"})
 npm WARN optional SKIPPING OPTIONAL DEPENDENCY: 7zip-bin-mac@^1.0.1 (node_modules/7zip-bin/node_modules/7zip-bin-mac):
 npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for 7zip-bin-mac@1.0.1: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: 7zip-bin-win@^2.1.0 (node_modules/7zip-bin/node_modules/7zip-bin-win):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for 7zip-bin-win@2.1.0: wanted {"os":"win32","arch":"any"} (current: {"os":"linux","arch":"x64"})
 npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules/chokidar/node_modules/fsevents):
 npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
 npm WARN url-loader@0.5.9 requires a peer of file-loader@* but none was installed.
@@ -1008,7 +1008,7 @@ npm WARN ajv-keywords@2.1.0 requires a peer of ajv@>=5.0.0 but none was installe
 
 Hash: 39e60f46ea24c2a341d7
 Version: webpack 2.7.0
-Time: 986ms
+Time: 876ms
                Asset    Size  Chunks                    Chunk Names
 ./src/main_bundle.js  481 kB       0  [emitted]  [big]  main
   [44] ./src/common/osVersion.js 378 bytes {0} [built]
@@ -1034,11 +1034,11 @@ WARNING in ./src/~/yargs/lib/parser.js
 > mattermost-desktop@3.7.0 build:renderer /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
 > cross-env NODE_ENV=production webpack --bail --config webpack.config.renderer.js
 
-(node:3011) DeprecationWarning: loaderUtils.parseQuery() received a non-string value which can be problematic, see https://github.com/webpack/loader-utils/issues/56
+(node:4772) DeprecationWarning: loaderUtils.parseQuery() received a non-string value which can be problematic, see https://github.com/webpack/loader-utils/issues/56
 parseQuery() will be replaced with getOptions() in the next major version of loader-utils.
 Hash: e4c145cebca5144215d2
 Version: webpack 2.7.0
-Time: 4628ms
+Time: 4216ms
                        Asset     Size  Chunks                    Chunk Names
           settings_bundle.js  1.66 MB       0  [emitted]  [big]  settings
              index_bundle.js   1.6 MB       1  [emitted]  [big]  index
@@ -1072,7 +1072,7 @@ No native production dependencies
 Packaging for linux ia32 using electron 1.6.2 to release/linux-ia32-unpacked
 Building tar.gz
 + exit 0
-Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.v4kGcb
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.1VqAMY
 + umask 022
 + cd /home/agoston/Documents/stuff/mattermost
 + '[' /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64 '!=' / ']'
@@ -1081,21 +1081,21 @@ Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.v4kGcb
 + mkdir -p /home/agoston/rpmbuild/BUILDROOT
 + mkdir /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64
 + cd desktop-3.7.0
++ rm -rf /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64
 + mkdir -p /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64//usr/lib64/
 + mkdir -p /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64//usr/bin/
 + cp -r release/linux-unpacked /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64//usr/lib64/
 + ln -s /usr/lib64/mattermost-desktop /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64//usr/bin/mattermost-desktop
-+ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /home/agoston/Documents/stuff/mattermost/desktop-3.7.0
 + /usr/lib/rpm/check-buildroot
 + /usr/lib/rpm/brp-compress
++ /usr/lib/rpm/brp-strip /usr/bin/strip
++ /usr/lib/rpm/brp-strip-comment-note /usr/bin/strip /usr/bin/objdump
 + /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
 + /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
 + /usr/lib/rpm/brp-python-hardlink
 + /usr/lib/rpm/redhat/brp-java-repack-jars
 Processing files: mattermost-desktop-3.7.0-1.fc26.x86_64
-error: File not found: /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/bin/*
-error: File not found: /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/lib64/*
-Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.Us0QgM
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.Lq4Zjm
 + umask 022
 + cd /home/agoston/Documents/stuff/mattermost
 + cd desktop-3.7.0
@@ -1104,7 +1104,7 @@ Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.Us0QgM
 + /usr/bin/mkdir -p /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/share/doc/mattermost-desktop
 + cp -pr README.md /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/share/doc/mattermost-desktop
 + exit 0
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.c0MFln
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.qFKXRJ
 + umask 022
 + cd /home/agoston/Documents/stuff/mattermost
 + cd desktop-3.7.0
@@ -1113,8 +1113,15 @@ Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.c0MFln
 + /usr/bin/mkdir -p /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/share/licenses/mattermost-desktop
 + cp -pr LICENSE.txt /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/share/licenses/mattermost-desktop
 + exit 0
-
-
-RPM build errors:
-    File not found: /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/bin/*
-    File not found: /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64/usr/lib64/*
+Provides: libnode.so()(64bit) mattermost-desktop = 3.7.0-1.fc26 mattermost-desktop(x86-64) = 3.7.0-1.fc26
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: /bin/sh ld-linux-x86-64.so.2()(64bit) ld-linux-x86-64.so.2(GLIBC_2.2.5)(64bit) ld-linux-x86-64.so.2(GLIBC_2.3)(64bit) libX11-xcb.so.1()(64bit) libX11.so.6()(64bit) libXcomposite.so.1()(64bit) libXcursor.so.1()(64bit) libXdamage.so.1()(64bit) libXext.so.6()(64bit) libXfixes.so.3()(64bit) libXi.so.6()(64bit) libXrandr.so.2()(64bit) libXrender.so.1()(64bit) libXss.so.1()(64bit) libXtst.so.6()(64bit) libasound.so.2()(64bit) libasound.so.2(ALSA_0.9)(64bit) libatk-1.0.so.0()(64bit) libc.so.6()(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3)(64bit) libc.so.6(GLIBC_2.3.2)(64bit) libc.so.6(GLIBC_2.3.4)(64bit) libc.so.6(GLIBC_2.4)(64bit) libc.so.6(GLIBC_2.6)(64bit) libc.so.6(GLIBC_2.7)(64bit) libc.so.6(GLIBC_2.9)(64bit) libcairo.so.2()(64bit) libcups.so.2()(64bit) libdbus-1.so.3()(64bit) libdl.so.2()(64bit) libdl.so.2(GLIBC_2.2.5)(64bit) libexpat.so.1()(64bit) libfontconfig.so.1()(64bit) libfreetype.so.6()(64bit) libgcc_s.so.1()(64bit) libgcc_s.so.1(GCC_3.0)(64bit) libgcc_s.so.1(GCC_4.0.0)(64bit) libgconf-2.so.4()(64bit) libgdk-x11-2.0.so.0()(64bit) libgdk_pixbuf-2.0.so.0()(64bit) libgio-2.0.so.0()(64bit) libglib-2.0.so.0()(64bit) libgmodule-2.0.so.0()(64bit) libgobject-2.0.so.0()(64bit) libgtk-x11-2.0.so.0()(64bit) libm.so.6()(64bit) libm.so.6(GLIBC_2.2.5)(64bit) libnode.so()(64bit) libnspr4.so()(64bit) libnss3.so()(64bit) libnss3.so(NSS_3.10)(64bit) libnss3.so(NSS_3.11)(64bit) libnss3.so(NSS_3.11.1)(64bit) libnss3.so(NSS_3.12)(64bit) libnss3.so(NSS_3.12.1)(64bit) libnss3.so(NSS_3.12.3)(64bit) libnss3.so(NSS_3.12.4)(64bit) libnss3.so(NSS_3.2)(64bit) libnss3.so(NSS_3.3)(64bit) libnss3.so(NSS_3.4)(64bit) libnss3.so(NSS_3.5)(64bit) libnss3.so(NSS_3.6)(64bit) libnss3.so(NSS_3.7)(64bit) libnss3.so(NSS_3.8)(64bit) libnss3.so(NSS_3.9)(64bit) libnss3.so(NSS_3.9.2)(64bit) libnssutil3.so()(64bit) libnssutil3.so(NSSUTIL_3.12)(64bit) libnssutil3.so(NSSUTIL_3.12.3)(64bit) libpango-1.0.so.0()(64bit) libpangocairo-1.0.so.0()(64bit) libpthread.so.0()(64bit) libpthread.so.0(GLIBC_2.2.5)(64bit) libpthread.so.0(GLIBC_2.3.2)(64bit) libpthread.so.0(GLIBC_2.3.3)(64bit) librt.so.1()(64bit) librt.so.1(GLIBC_2.2.5)(64bit) libsmime3.so()(64bit) libsmime3.so(NSS_3.10)(64bit) libsmime3.so(NSS_3.2)(64bit) libstdc++.so.6()(64bit) libstdc++.so.6(CXXABI_1.3)(64bit) libstdc++.so.6(CXXABI_1.3.5)(64bit) libstdc++.so.6(GLIBCXX_3.4)(64bit) libstdc++.so.6(GLIBCXX_3.4.10)(64bit) libstdc++.so.6(GLIBCXX_3.4.11)(64bit) libstdc++.so.6(GLIBCXX_3.4.14)(64bit) libstdc++.so.6(GLIBCXX_3.4.15)(64bit) libstdc++.so.6(GLIBCXX_3.4.9)(64bit) libxcb.so.1()(64bit) rtld(GNU_HASH)
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64
+Wrote: /home/agoston/Documents/stuff/mattermost/mattermost-desktop-3.7.0-1.fc26.src.rpm
+Wrote: /home/agoston/Documents/stuff/mattermost/x86_64/mattermost-desktop-3.7.0-1.fc26.x86_64.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.HwXoDc
++ umask 022
++ cd /home/agoston/Documents/stuff/mattermost
++ cd desktop-3.7.0
++ /usr/bin/rm -rf /home/agoston/rpmbuild/BUILDROOT/mattermost-desktop-3.7.0-1.fc26.x86_64
++ exit 0

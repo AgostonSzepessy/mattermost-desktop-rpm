@@ -9,6 +9,8 @@ Source0:    https://github.com/mattermost/desktop/archive/v%{version}.tar.gz
 BuildRequires: npm, nodejs, python, gcc-c++
 Requires: gtk2, libXtst, libXScrnSaver, gconf-editor, nss, nspr, alsa-lib
 
+%global debug_package %{nil}
+
 %description
 Open source, private cloud Slack-alternative, workplace messaging for web, PCs and phones.
 
@@ -22,14 +24,15 @@ npm run build
 npm run package:linux
 
 %install
+rm -rf %{buildroot}
 mkdir -p %{buildroot}/%{_libdir}/
 mkdir -p %{buildroot}/%{_bindir}/
 cp -r release/linux-unpacked %{buildroot}/%{_libdir}/
 ln -s %{_libdir}/%{name} %{buildroot}/%{_bindir}/%{name}
 
 %files
-%{buildroot}/%{_bindir}/*
-%{buildroot}/%{_libdir}/*
+%{_bindir}/*
+%{_libdir}/*
 %doc README.md
 %license LICENSE.txt
 
