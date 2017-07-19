@@ -23,18 +23,21 @@ npm install
 npm run build
 npm run package:linux
 
+%install
+rm -rf %{buildroot}
+mkdir -p %{buildroot}/%{_libdir}/%{name}
+mkdir -p %{buildroot}/%{_bindir}/
+mkdir -p %{buildroot}/%{_datadir}/applications
+
 mv release/linux-unpacked/ release/%{name}
 cd release/%{name}
 ./create_desktop_file.sh
 
-%install
-rm -rf %{buildroot}
-mkdir -p %{buildroot}/%{_libdir}/
-mkdir -p %{buildroot}/%{_bindir}/
-mkdir -p %{buildroot}/%{_datadir}/applications
+cp -r * %{buildroot}/%{_libdir}/%{name}
+ln -s %{_libdir}/%{name}/%{name} %{buildroot}/%{_bindir}/%{name}
 
-cp -r release/%{name} %{buildroot}/%{_libdir}/
-ln -s %{_libdir}/%{name} %{buildroot}/%{_bindir}/%{name}
+ls %{buildroot}/%{_libdir}/
+ls %{buildroot}/%{_libdir}/%{name}
 
 desktop-file-install --dir=%{buildroot}/%{_datadir}/applications %{buildroot}/%{_libdir}/%{name}/Mattermost.desktop
 
@@ -45,6 +48,7 @@ desktop-file-install --dir=%{buildroot}/%{_datadir}/applications %{buildroot}/%{
 
 %doc README.md
 %license LICENSE.txt
+
 
 %changelog
 * Sat Jul 15 2017 Agoston Szepessy <agoston@fedoraproject.org> - 1.0-1
