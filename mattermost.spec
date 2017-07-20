@@ -1,6 +1,6 @@
 Name:       mattermost-desktop
 Version:    3.7.0
-Release:    1%{dist}
+Release:    3%{dist}
 Summary:    Mattermost Desktop application for Linux.
 URL:        https://about.mattermost.com/
 License:    ASL 2.0
@@ -28,18 +28,32 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}/%{_libdir}/%{name}
 mkdir -p %{buildroot}/%{_bindir}/
 mkdir -p %{buildroot}/%{_datadir}/applications
+mkdir -p %{buildroot}/%{_datadir}/pixmaps
 
 mv release/linux-unpacked/ release/%{name}
 cd release/%{name}
-./create_desktop_file.sh
+rm create_desktop_file.sh
+
+mv icon.png %{name}.png
+
+echo "[Desktop Entry]" >> %{name}.desktop
+echo "Name=Mattermost" >> %{name}.desktop
+echo "Comment=Mattermost Desktop application for Linux" >> %{name}.desktop
+echo "Exec="%{name} >> %{name}.desktop
+echo "Terminal=false" >> %{name}.desktop
+echo "Type=Application" >> %{name}.desktop
+echo "Icon="%{_datadir}/pixmaps/%{name}.png >> %{name}.desktop
+echo "Categories=Network;Application;" >> %{name}.desktop
 
 cp -r * %{buildroot}/%{_libdir}/%{name}
 ln -s %{_libdir}/%{name}/%{name} %{buildroot}/%{_bindir}/%{name}
 
+cp %{name}.png %{buildroot}/%{_datadir}/pixmaps/
+
 ls %{buildroot}/%{_libdir}/
 ls %{buildroot}/%{_libdir}/%{name}
 
-desktop-file-install --dir=%{buildroot}/%{_datadir}/applications %{buildroot}/%{_libdir}/%{name}/Mattermost.desktop
+desktop-file-install --dir=%{buildroot}/%{_datadir}/applications %{buildroot}/%{_libdir}/%{name}/%{name}.desktop
 
 %files
 %{_bindir}/*
@@ -49,7 +63,10 @@ desktop-file-install --dir=%{buildroot}/%{_datadir}/applications %{buildroot}/%{
 %doc README.md
 %license LICENSE.txt
 
-
 %changelog
+* Wed Jul 19 2017 Agoston Szepessy <agoston@fedoraproject.org> - 1.0-3
+- Fix error in desktop file icon generation
+* Tue Jul 18 2017 Agoston Szepessy <agoston@fedoraproject.org> - 1.0-2
+- Fix desktop file
 * Sat Jul 15 2017 Agoston Szepessy <agoston@fedoraproject.org> - 1.0-1
 - Initial version of SPEC file
