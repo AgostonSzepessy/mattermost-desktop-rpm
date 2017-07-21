@@ -1,6 +1,6 @@
 Name:       mattermost-desktop
 Version:    3.7.0
-Release:    3%{dist}
+Release:    4%{dist}
 Summary:    Mattermost Desktop application for Linux.
 URL:        https://about.mattermost.com/
 License:    ASL 2.0
@@ -50,9 +50,6 @@ ln -s %{_libdir}/%{name}/%{name} %{buildroot}/%{_bindir}/%{name}
 
 cp %{name}.png %{buildroot}/%{_datadir}/pixmaps/
 
-ls %{buildroot}/%{_libdir}/
-ls %{buildroot}/%{_libdir}/%{name}
-
 desktop-file-install --dir=%{buildroot}/%{_datadir}/applications %{buildroot}/%{_libdir}/%{name}/%{name}.desktop
 
 %files
@@ -61,9 +58,11 @@ desktop-file-install --dir=%{buildroot}/%{_datadir}/applications %{buildroot}/%{
 %{_datadir}/*
 
 %doc README.md
-%license LICENSE.txt
+%license LICENSE.txt NOTICE.txt
 
 %changelog
+* Thu Jul 20 2017 Agoston Szepessy <agoston@fedoraproject.org> - 1.0-4
+- Clean up spec file and add other license section
 * Wed Jul 19 2017 Agoston Szepessy <agoston@fedoraproject.org> - 1.0-3
 - Fix error in desktop file icon generation
 * Tue Jul 18 2017 Agoston Szepessy <agoston@fedoraproject.org> - 1.0-2
