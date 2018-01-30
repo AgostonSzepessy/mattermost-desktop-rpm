@@ -1,6 +1,6 @@
 Name:       mattermost-desktop
-Version:    3.7.1
-Release:    2%{dist}
+Version:    4.0.0
+Release:    1%{dist}
 Summary:    Mattermost Desktop application for Linux.
 URL:        https://about.mattermost.com/
 License:    ASL 2.0
@@ -80,6 +80,8 @@ desktop-file-install --dir=%{buildroot}/%{_datadir}/applications %{buildroot}/%{
 %license LICENSE.txt NOTICE.txt
 
 %changelog
+* Tue Jan 30 2018 Agoston Szepessy <agoston@fedoraproject.org> - 4.0.0.-1
+- Upgrade to version 4.0.0
 * Sun Nov 26 2017 Agoston Szepessy <agoston@fedoraproject.org> - 3.7.1-2
 - Remove libffmpeg.so()(64bit) from automatic RPM dependency requirements
 * Fri Sep 08 2017 Agoston Szepessy <agoston@fedoraproject.org> - 3.7.1-1
