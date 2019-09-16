@@ -1,5 +1,5 @@
 Name:       mattermost-desktop
-Version:    4.1.2
+Version:    4.2.3
 Release:    1%{dist}
 Summary:    Mattermost Desktop application for Linux.
 URL:        https://about.mattermost.com/
@@ -80,6 +80,8 @@ desktop-file-install --dir=%{buildroot}/%{_datadir}/applications %{buildroot}/%{
 %license LICENSE.txt NOTICE.txt
 
 %changelog
+* Mon Sep 16 2019 Stefan Jakobs <sjakobs@anexia-it.com> - 4.2.3-1
+- Upgrade to version 4.2.3
 * Sun Jul 01 2018 Agoston Szepessy <agoston@fedoraproject.org> - 4.1.2-1
 - Upgrade to version 4.1.2
 * Mon Apr 02 2018 Agoston Szepessy <agoston@fedoraproject.org> - 4.0.1-1
