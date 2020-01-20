@@ -1,3 +1,5 @@
+**This repo is unmaintained. There are newer versions of Mattermost available on copr than in this repo**
+
 This is a SPEC file for mattermost-desktop for Fedora and is used to create an RPM.
 
 # Building
